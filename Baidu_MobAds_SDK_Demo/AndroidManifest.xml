@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.baidu.mobads.demo.main"
+	android:versionCode="1" android:versionName="1.0" xmlns:tools="http://schemas.android.com/tools">
+
+	<uses-sdk android:minSdkVersion="4"></uses-sdk>
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!-- 以下为可选权限 -->
+  	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  	<uses-permission android:name="android.permission.RECORD_AUDIO" /> 
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  	<uses-permission 
+  	    android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" /> 
+	
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<meta-data android:name="BaiduMobAd_APP_ID" android:value="debug" /> 
+		<meta-data android:name="BaiduMobAd_APP_SEC" android:value="debug" />
+		<activity android:name="com.baidu.mobads.AppActivity" 
+		    android:configChanges="keyboard|keyboardHidden|orientation" />
+		
+		<activity android:name=".BaiduSDKDemo" android:label="@string/app_name"> 
+		</activity>
+		<activity android:name=".AdvancedLayout" android:label="@string/advanced" 
+            android:configChanges="orientation|keyboardHidden"/>
+		<activity android:name=".SimpleDeclaringLayout" android:label="@string/simple_declaring" 
+            android:configChanges="orientation|keyboardHidden"/>
+		<activity android:name=".SimpleCodingLayout" android:label="@string/simple_coding" 
+            android:configChanges="orientation|keyboardHidden" />
+		<activity android:name=".video.BaiduSDKVideoDemo" android:label="@string/simple_video" 
+            android:configChanges="orientation|keyboardHidden" />
+		<activity android:name=".video.VideoInterstitialActivity" android:label="@string/simple_video_inter" 
+            android:configChanges="orientation|keyboardHidden" />
+		<activity android:name=".video.VideoPauseActivity" android:label="@string/simple_video_pause" 
+            android:configChanges="orientation|keyboardHidden" />
+		<activity android:name=".video.VideoSwitchActivity" android:label="@string/simple_video_switch" 
+            android:configChanges="orientation|keyboardHidden" />
+		
+		<activity android:name=".InterstitialAdActivity" android:label="@string/simple_inters" />
+		<activity android:name=".IconsAdActivity" android:label="@string/simple_icon" />
+		<activity android:name=".SplashActivity" android:label="@string/app_name"  
+		    android:screenOrientation="portrait"
+		    android:theme="@android:style/Theme.NoTitleBar" >
+		    <intent-filter>
+				<action android:name="android.intent.action.MAIN" /> 
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>
